@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The Crucible</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  <script type="importmap">
+{
+  "imports": {
+    "react/": "https://esm.sh/react@^19.1.0/",
+    "react": "https://esm.sh/react@^19.1.0",
+    "react-dom/": "https://esm.sh/react-dom@^19.1.0/",
+    "@google/genai": "https://esm.sh/@google/genai@^1.8.0"
+  }
+}
+</script>
+<style>
+      :root {
+        --neon-cyan: #00ffff;
+        --neon-pink: #ff00ff;
+        --neon-purple: #9d00ff;
+        --neon-green: #39ff14;
+        --dark-bg: #0d0d1a;
+        --card-bg: rgba(23, 23, 33, 0.6);
+      }
+
+      body {
+        background-color: var(--dark-bg);
+        color: #e0e0e0;
+      }
+      
+      .dark-bg { background-color: var(--dark-bg); }
+
+      .card-bg { 
+        background-color: var(--card-bg);
+        backdrop-filter: blur(8px);
+        -webkit-backdrop-filter: blur(8px);
+      }
+      
+      .neon-text-cyan { color: var(--neon-cyan); text-shadow: 0 0 2px var(--neon-cyan), 0 0 5px var(--neon-cyan); }
+      .neon-text-pink { color: var(--neon-pink); text-shadow: 0 0 2px var(--neon-pink), 0 0 5px var(--neon-pink); }
+      .neon-text-purple { color: var(--neon-purple); text-shadow: 0 0 2px var(--neon-purple), 0 0 5px var(--neon-purple); }
+      .neon-text-green { color: var(--neon-green); text-shadow: 0 0 2px var(--neon-green), 0 0 5px var(--neon-green); }
+
+      /* Custom Scrollbar */
+      ::-webkit-scrollbar {
+        width: 6px;
+        height: 6px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #000000;
+      }
+      ::-webkit-scrollbar-thumb {
+        background-color: var(--neon-cyan);
+        border-radius: 3px;
+        box-shadow: 0 0 2px var(--neon-cyan), 0 0 5px var(--neon-cyan);
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: white;
+        box-shadow: 0 0 5px white, 0 0 10px white;
+      }
+
+      input[type=range] {
+        -webkit-appearance: none;
+        background: transparent;
+      }
+
+      input[type=range]::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        height: 16px;
+        width: 16px;
+        border-radius: 50%;
+        background: var(--neon-cyan);
+        cursor: pointer;
+        box-shadow: 0 0 5px var(--neon-cyan), 0 0 8px var(--neon-cyan);
+        margin-top: -6px; /* You need to specify a margin in Chrome, but in Firefox and IE it is automatic */
+      }
+      input[type=range]::-webkit-slider-runnable-track {
+        width: 100%;
+        height: 4px;
+        cursor: pointer;
+        background: #334155;
+        border-radius: 2px;
+      }
+
+    </style>
+</head>
+  <body class="dark-bg text-gray-100 font-sans antialiased">
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>

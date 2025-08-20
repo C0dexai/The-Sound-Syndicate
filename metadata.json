@@ -1,0 +1,8 @@
+{
+  "name": "The Sound Syndicate",
+  "description": "An advanced sound engineering tool powered by an AI collective. Design, analyze, and optimize acoustic environments for clarity and OSHA compliance. From studio blueprints to live sound analysis, control every frequency.",
+  "requestFramePermissions": [
+    "microphone"
+  ],
+  "prompt": ""
+}
